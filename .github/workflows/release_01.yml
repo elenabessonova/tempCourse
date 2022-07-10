@@ -16,7 +16,7 @@ jobs:
           cmake --build ./01
           cmake --build ./01 --target test_version
           cmake --build ./01 --target package
-      - name: Create Release
+      - name: Create Release_01
         id: create_release
         uses: actions/create-release@v1.0.0
         env: 
@@ -26,7 +26,7 @@ jobs:
           release_name: Release_01  ${{ github.run_number }}
           draft: false
           prerelease: false
-      - name: Upload Release Asset
+      - name: Upload Release_01 Asset
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
