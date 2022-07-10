@@ -23,7 +23,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.run_number }}
-          release_name: Release  ${{ github.run_number }}
+          release_name: Release_01  ${{ github.run_number }}
+          release_branch: task_01
           draft: false
           prerelease: false
       - name: Upload Release Asset
