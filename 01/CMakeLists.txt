@@ -7,11 +7,11 @@ project(helloworld VERSION ${PROJECT_VERSION})
 
 find_package(GTest REQUIRED)
 
-configure_file(01/version.h.in 01/version.h)
+configure_file(version.h.in version.h)
 
-add_executable(helloworld_cli 01/main.cpp)
-add_library(helloworld 01/lib.cpp)
-add_executable(test_version 01/test_version.cpp)
+add_executable(helloworld_cli main.cpp)
+add_library(helloworld lib.cpp)
+add_executable(test_version test_version.cpp)
 
 set_target_properties(helloworld_cli helloworld test_version PROPERTIES
     CXX_STANDARD 14
@@ -54,7 +54,7 @@ endif()
 
 
 
-install(TARGETS helloworld_cli RUNTIME DESTINATION 01/bin)
+install(TARGETS helloworld_cli RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 
