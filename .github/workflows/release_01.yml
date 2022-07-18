@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - 'task_01'
+      - 'main'
       - 'feature/github_actions'
 
 jobs:
